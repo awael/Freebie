@@ -2,7 +2,7 @@
 A mobile application for item donation
 
 # CSCE493001 - Selected Topics in CSCE (2021 Winter)
-# Prof. Mohamed Shalan
+ Prof. Mohamed Shalan
 
 # Idea
 Freebie is a mobile platform that aims to help people in need, while helping others give away their unneeded items.
