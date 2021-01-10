@@ -15,13 +15,13 @@ Ahmed Fahmy     900160127
 
 Ahmed Fayed     900162747
 
-Ahmed Ibrahim
+Ahmed Ibrahim   900161555
 
  <br/>
 
 1- Project Overview
 
-Freebie aims to address multiple issues including the prevelence of poverty, the increased clutter and unneeded items in many households, and the large gap between some comunities. Freebie tries to bridge this gap by acting as a platform for people to post their items to give away, along with contact information and pickup location, for any interested party to come pick it up free of charge. Freebie will limit users by tying accounts by their authenticated cell phone numbers in order to avoid exploitation of the system 
+Freebie aims to address multiple issues including the prevalence of poverty, the increased clutter and unneeded items in many households, and the large gap between some communities. Freebie tries to bridge this gap by acting as a platform for people to post their items to give away, along with contact information and pickup location, for any interested party to come pick it up free of charge. Freebie will limit users by tying accounts by their authenticated cell phone numbers in order to avoid exploitation of the system 
  
  <br/>
 
@@ -33,7 +33,7 @@ A user of the application should be able to:
       
       -Perform two-factor authentication (2FA) to tie an account with a cell phone number
       
-      -Post an item up for donation after specifing key attributes such as category, contact information and location of pickup.
+      -Post an item up for donation after specifying  key attributes such as category, contact information and location of pickup.
       
       -Set a posted item as donated, removing it from the platform.
       
@@ -50,7 +50,7 @@ A user of the application should be able to:
 
   -Login/Signup:
   
-      Users can enter their credentials to login or signup. 2FA will be used when sighning up 
+      Users can enter their credentials to login or signup. 2FA will be used when signing up 
       
   -Homepage:
   
