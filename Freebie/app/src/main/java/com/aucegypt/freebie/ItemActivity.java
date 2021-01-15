@@ -24,6 +24,6 @@ public class ItemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_item);
 
         relativeLayout = findViewById(R.id.rel1);
-        handler.postDelayed(runnable, 2000);
+        handler.postDelayed(runnable, 500);
     }
 }

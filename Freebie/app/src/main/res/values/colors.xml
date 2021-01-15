@@ -9,8 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bg">#ffd194</color>
     <color name="transparent">#00000000</color>
+    <color name="logoColor">#f2af58</color>
 
     <color name = "gradStart">#4b6cb7</color>
     <color name = "gradStop">#182848</color>
+    <color name="white2">#80FFFFFF</color>
 
 </resources>

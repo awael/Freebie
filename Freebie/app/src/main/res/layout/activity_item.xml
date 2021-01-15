@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    android:background="@drawable/grad_bg"
+    android:background="@drawable/bg"
     tools:context=".ItemActivity">
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_centerInParent="true">
+        android:layout_marginLeft="40dp">
 
         <ImageView
             android:id="@+id/img_logo"
@@ -28,16 +28,16 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:id="@+id/rel1"
-            android:visibility="gone"
-            android:layout_below="@+id/img_logo">
+            android:layout_below="@+id/img_logo"
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:text="user information"
-                android:textColor="@color/white"
+                android:text="User Information"
+                android:textColor="@color/black"
                 android:layout_marginTop="20dp"
                 android:textSize="30sp"/>
 
@@ -56,9 +56,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
                         android:text="Name"
                         android:textAllCaps="true"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="15sp"/>
 
                     <EditText
@@ -69,7 +71,8 @@
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
                         android:layout_marginTop="5dp"
-                        android:textColor="@color/white"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
                         android:hint="AutoFilled Name"
                         android:textSize="15sp"/>
                 </LinearLayout>
@@ -77,6 +80,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -84,8 +88,9 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="Phone Number"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"                        android:textAllCaps="true"
+                        android:textColor="@color/black"
                         android:textSize="15sp"/>
 
                     <EditText
@@ -96,7 +101,8 @@
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
                         android:layout_marginTop="5dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
                         android:hint="AutoFilled Phone Number"
                         android:textSize="15sp"/>
                 </LinearLayout>
@@ -109,9 +115,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
                         android:text="Address"
                         android:textAllCaps="true"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="15sp"/>
 
                     <EditText
@@ -122,7 +130,8 @@
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
                         android:layout_marginTop="5dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
                         android:hint="AutoFilled Address"
                         android:textSize="15sp"/>
                 </LinearLayout>
@@ -136,9 +145,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
                         android:text="Notes"
                         android:textAllCaps="true"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="15sp"/>
 
                     <EditText
@@ -148,8 +159,8 @@
                         android:fontFamily="sans-serif-light"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/white"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
                         android:textSize="15sp"/>
                 </LinearLayout>
             </LinearLayout>
@@ -158,8 +169,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lin_layout"
-                android:layout_marginTop="50dp"
-                android:background="@drawable/tb_item"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tb_btn"
                 android:fontFamily="sans-serif-medium"
                 android:text="Donate"
                 android:paddingLeft="70dp"
