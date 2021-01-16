@@ -54,7 +54,7 @@
             android:layout_centerHorizontal="true"
             android:fontFamily="sans-serif"
             android:text="Cairo, Egypt"
-            android:textColor="@color/address"
+            android:textColor="@color/white"
             android:textSize="14sp" />
 
     </RelativeLayout>
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:background="@color/followersBg"
+            android:background="@color/gradEnd"
             android:gravity="center"
             android:paddingBottom="5dp"
             android:paddingTop="5dp">
