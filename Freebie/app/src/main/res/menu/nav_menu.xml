@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="SETTINGS">
+        <menu>
+            <item android:title="Profile"
+                android:id="@+id/profileSideMenu"
+                android:icon="@drawable/profileicon" />
+            <item android:title="Track Donated Items"
+                android:id="@+id/trackSideMenu"
+                android:icon="@drawable/trackicon" />
+        </menu>
+    </item>
+
+    <item android:title="SYSTEM">
+        <menu>
+
+            <item android:title="About Us"
+                android:id="@+id/aboutusSideMenu"
+                android:icon="@drawable/aboutus" />
+            <item android:title="Sign Out"
+                android:id="@+id/signoutSideMenu"
+                android:icon="@drawable/ic_baseline_power_settings_new_24" />
+        </menu>
+    </item>
+
+</menu>
