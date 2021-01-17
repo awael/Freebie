@@ -11,8 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Freebie">
+        <activity android:name=".track"></activity>
         <activity android:name=".afterSplash">
-<!--            android:theme="@style/AppTheme.NoActionBar">-->
+
+            <!-- android:theme="@style/AppTheme.NoActionBar"> -->
 
         </activity>
         <activity android:name=".splashScreen">
@@ -22,12 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUp"/>
-        <activity android:name=".Profile"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".SignUp" />
+        <activity android:name=".Profile" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".HomePage" />
         <activity android:name=".SecondActivity" />
-
         <activity
             android:name=".ItemActivity"
             android:theme="@style/AppTheme.NoActionBar">

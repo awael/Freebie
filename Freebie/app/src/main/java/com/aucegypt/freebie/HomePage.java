@@ -79,10 +79,10 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
                 Intent intent = new Intent(this, Profile.class);
                 startActivity(intent);
                 break;
-//            case R.id.trackSideMenu:
-//                intent = new Intent(this, Class2.class);
-//                startActivity(intent);
-//                break;
+            case R.id.trackSideMenu:
+                intent = new Intent(this, track.class);
+               startActivity(intent);
+                break;
 //            case R.id.aboutusSideMenu:
 //                intent = new Intent(this, About.class);
 //                startActivity(intent);
