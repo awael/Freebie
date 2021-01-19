@@ -63,7 +63,7 @@
                     android:textSize="30dp" />
 
                 <EditText
-                    android:id="@+id/signupemailtxt"
+                    android:id="@+id/emailtxt"
                     android:background="@drawable/edittextstyle"
                     android:layout_marginTop="15dp"
                     android:hint="Email"
@@ -74,7 +74,7 @@
                     android:layout_gravity="center_horizontal"/>
 
                 <EditText
-                    android:id="@+id/signinpassword"
+                    android:id="@+id/passwordtxt"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
