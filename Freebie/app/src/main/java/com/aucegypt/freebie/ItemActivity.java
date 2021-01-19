@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 public class ItemActivity extends AppCompatActivity {
     Button donate;
+    Button editAddress;
+
 
     RelativeLayout relativeLayout;
     Handler handler = new Handler();
@@ -48,6 +50,10 @@ public class ItemActivity extends AppCompatActivity {
                 break;
             case 1:
                 uri = "@drawable/foodicon";
+                ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(ItemActivity.this,
+                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.foodngos));
+                myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                mySpinner.setAdapter(myAdapter2);
                 break;
             case 2:
                 uri = "@drawable/blankets";
@@ -65,7 +71,7 @@ public class ItemActivity extends AppCompatActivity {
                 uri = "@drawable/medicine";
                 break;
             case 7:
-                uri = "@drawable/footwear";
+                uri = "@drawable/bags";
                 break;
             case 8:
                 uri = "@drawable/sanitary";
@@ -98,6 +104,15 @@ public class ItemActivity extends AppCompatActivity {
         relativeLayout = findViewById(R.id.rel1);
         handler.postDelayed(runnable, 500);
 
+        editAddress=(Button)findViewById(R.id.addressButton);
+        editAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ItemActivity.this, Profile.class);
+                startActivity(intent);
+            }
+        });
+
         donate=(Button)findViewById(R.id.donateButton);
         donate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,6 +122,8 @@ public class ItemActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
 
     }

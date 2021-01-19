@@ -114,7 +114,7 @@
                             android:textSize="15sp" />
 
                         <Button
-                            android:id="@+id/button"
+                            android:id="@+id/addressButton"
                             android:layout_width="50dp"
                             android:layout_height="30dp"
                             android:layout_weight="1"
