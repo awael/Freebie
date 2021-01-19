@@ -64,7 +64,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
                 //Create new intent here
 //                Toast.makeText(HomePage.this,"Clicked Index "+finalI,Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(HomePage.this, ItemActivity.class);
-//                intent.putExtra()
+                intent.putExtra("widgetIndex",finalI);
                 startActivity(intent);
             });
         }

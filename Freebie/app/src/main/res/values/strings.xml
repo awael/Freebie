@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">Freebie</string>
+    
+    <string-array name="ngos">
+        <item>Misr Al Kheir</item>
+        <item>Helm</item>
+        <item>Al Orman</item>
+        <item>Resala</item>
+    </string-array>
+
+    <string-array name="foodngos">
+        <item>Egyptian Food Bank</item>
+        <item>Misr Al Kheir</item>
+    </string-array>
+
     <string name="openNavDrawer"> Navigation Drawer Open</string>
     <string name="closeNavDrawer"> Navigation Drawer Close</string>
 </resources>
