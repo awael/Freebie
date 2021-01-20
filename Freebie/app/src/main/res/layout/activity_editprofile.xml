@@ -68,11 +68,11 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
         <Button
-            android:id="@+id/editprofilebutton"
+            android:id="@+id/updateprofilebutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/gradEnd"
-            android:text="Edit"
+            android:text="Confirm"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -149,7 +149,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -159,12 +159,13 @@
                         android:textColor="@color/headings"
                         android:textSize="13sp" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="Ahmed Abouzaid"
                         android:textColor="#000000"
+                        android:id="@+id/editName"
                         android:textSize="18sp" />
 
                     <View
@@ -177,7 +178,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:layout_marginTop="15dp"
                     android:orientation="vertical">
 
@@ -188,11 +189,12 @@
                         android:textColor="@color/headings"
                         android:textSize="13sp" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="ahmedFreebie"
+                        android:id="@+id/editUserName"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -206,7 +208,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -216,11 +218,12 @@
                         android:textColor="@color/headings"
                         android:textSize="13sp" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="ahmed@freebie.com"
+                        android:id="@+id/editEmail"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -234,7 +237,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:layout_marginTop="15dp"
                     android:orientation="vertical">
 
@@ -245,12 +248,13 @@
                         android:textColor="@color/headings"
                         android:textSize="13sp" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="+1-202-555-0157"
                         android:textColor="#000000"
+                        android:id="@+id/editPhone"
                         android:textSize="18sp" />
 
                     <View
@@ -263,7 +267,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:layout_marginTop="15dp"
                     android:orientation="vertical">
 
@@ -274,11 +278,12 @@
                         android:textColor="@color/headings"
                         android:textSize="13sp" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="New Cairo, Egypt"
+                        android:id="@+id/editAddress1"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -292,7 +297,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:layout_marginTop="15dp"
                     android:orientation="vertical">
 
@@ -303,11 +308,12 @@
                         android:textColor="@color/headings"
                         android:textSize="13sp" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="Alexandria, Egypt"
+                        android:id="@+id/editAddress2"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
