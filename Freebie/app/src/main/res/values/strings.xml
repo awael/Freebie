@@ -8,6 +8,23 @@
         <item>Resala</item>
     </string-array>
 
+    <string-array name="dev_info_subtitle">
+        <item>Developer</item>
+        <item>Developer</item>
+        <item>Developer</item>
+        <item>Developer</item>
+        <item>Contact us</item>
+
+    </string-array>
+
+    <string-array name="dev_info">
+        <item>Ahmed Abouzaid</item>
+        <item>Ahmed Fahmy</item>
+        <item>Ahmed Fayed</item>
+        <item>Ahmed Ibrahim</item>
+        <item>freebieauc@gmail.com</item>
+    </string-array>
+
     <string-array name="foodngos">
         <item>Egyptian Food Bank</item>
         <item>Misr Al Kheir</item>

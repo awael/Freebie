@@ -86,10 +86,10 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
                 intent = new Intent(this, track.class);
                startActivity(intent);
                 break;
-//            case R.id.aboutusSideMenu:
-//                intent = new Intent(this, About.class);
-//                startActivity(intent);
-//                break;
+            case R.id.aboutusSideMenu:
+                intent = new Intent(this, about.class);
+                startActivity(intent);
+                break;
             case R.id.signoutSideMenu:
                 firebaseAuth.signOut();
                 startActivity(new Intent(HomePage.this, MainActivity.class));
