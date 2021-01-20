@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         noAccButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this, ngoView.class);
+                Intent intent=new Intent(MainActivity.this, SignUp.class);
                 startActivity(intent);
             }
         });

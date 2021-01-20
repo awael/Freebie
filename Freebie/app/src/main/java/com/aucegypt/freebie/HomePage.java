@@ -15,6 +15,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -22,6 +23,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     Toolbar toolbar;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +75,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+        firebaseAuth.getInstance();
 
         switch (id){
             case R.id.profileSideMenu:
@@ -88,8 +91,11 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
 //                startActivity(intent);
 //                break;
             case R.id.signoutSideMenu:
-                intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
+                firebaseAuth.signOut();
+                startActivity(new Intent(HomePage.this, MainActivity.class));
+                finish();
+//                intent = new Intent(this, MainActivity.class);
+//                startActivity(intent);
                 break;
             default:
                 break;
