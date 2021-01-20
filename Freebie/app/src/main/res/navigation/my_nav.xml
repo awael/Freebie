@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/ngoView_public">
+
+    <fragment
+        android:id="@+id/ngoView_public"
+        android:name="com.aucegypt.freebie.ngoView_public"
+        android:label="fragment_ngo_view_public"
+        tools:layout="@layout/fragment_ngo_view_public" />
+    <fragment
+        android:id="@+id/ngoView_private"
+        android:name="com.aucegypt.freebie.ngoView_private"
+        android:label="fragment_ngo_view_private"
+        tools:layout="@layout/fragment_ngo_view_private" />
+</navigation>

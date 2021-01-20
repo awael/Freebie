@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Freebie">
-        <activity android:name=".track"></activity>
+        <activity android:name=".ngoView"></activity>
+        <activity android:name=".track" />
         <activity android:name=".afterSplash">
 
             <!-- android:theme="@style/AppTheme.NoActionBar"> -->
