@@ -35,17 +35,16 @@ private Button addItem;
         SwipeMenuListView listView=(SwipeMenuListView)findViewById(R.id.listView);
         adapter=new ArrayAdapter(track.this, android.R.layout.simple_list_item_1,arrayList);
         listView.setAdapter(adapter);
-        addItem=(Button)findViewById(R.id.additem);
         arrayList.add("T shirt");
         arrayList.add("Data structure book");
         arrayList.add("Chair");
-        addItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent1=new Intent(getApplicationContext(),HomePage.class);
-                startActivity(intent1);
-            }
-        });
+//        addItem.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent1=new Intent(getApplicationContext(),HomePage.class);
+//                startActivity(intent1);
+//            }
+//        });
 
         SwipeMenuCreator creator = new SwipeMenuCreator() {
 
