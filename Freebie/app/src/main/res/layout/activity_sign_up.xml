@@ -35,6 +35,37 @@
             android:layout_gravity="center_horizontal"/>
 
         <EditText
+            android:id="@+id/nametxt"
+            android:background="@drawable/edittextstyle"
+            android:layout_marginTop="15dp"
+            android:hint="Full Name"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawablePadding="10dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+        <EditText
+            android:id="@+id/phonetxt"
+            android:background="@drawable/edittextstyle"
+            android:layout_marginTop="15dp"
+            android:hint="Phone Number"
+            android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+            android:drawablePadding="10dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+        <EditText
+            android:id="@+id/addresstxt"
+            android:background="@drawable/edittextstyle"
+            android:layout_marginTop="15dp"
+            android:hint="Address"
+            android:drawableLeft="@drawable/ic_baseline_location_city_24"
+            android:drawablePadding="10dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
             android:id="@+id/passwordtxt"
             android:background="@drawable/edittextstyle"
             android:drawableLeft="@drawable/ic_lock_open_black_24dp"
