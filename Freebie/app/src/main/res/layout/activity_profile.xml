@@ -38,14 +38,15 @@
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
             android:layout_below="@+id/imgUser"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15sp"
             android:fontFamily="sans-serif-light"
-            android:text="Ahmed Abouzaid"
+            android:text="User Name"
             android:textColor="@color/white"
             android:textSize="32sp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -53,27 +54,16 @@
             app:layout_constraintTop_toBottomOf="@+id/imgUser" />
 
 
-        <TextView
-            android:id="@+id/tv_address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_name"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="sans-serif"
-            android:text="Cairo, Egypt"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
-
         <Button
             android:id="@+id/editprofilebutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
             android:backgroundTint="@color/gradEnd"
             android:text="Edit"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -102,10 +92,11 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/noItemsDonated"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="30"
+                    android:text="0"
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -160,10 +151,11 @@
                         android:textSize="13sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/username2"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
-                        android:text="Ahmed Abouzaid"
+                        android:text="User Name"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -189,10 +181,11 @@
                         android:textSize="13sp" />
 
                     <TextView
+                        android:id="@+id/username3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
-                        android:text="ahmedFreebie"
+                        android:text="username"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -217,10 +210,11 @@
                         android:textSize="13sp" />
 
                     <TextView
+                        android:id="@+id/useremail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
-                        android:text="ahmed@freebie.com"
+                        android:text="user@freebie.com"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -246,10 +240,11 @@
                         android:textSize="13sp" />
 
                     <TextView
+                        android:id="@+id/userphone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
-                        android:text="+1-202-555-0157"
+                        android:text="+1-122-122-1222"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -275,6 +270,7 @@
                         android:textSize="13sp" />
 
                     <TextView
+                        android:id="@+id/useraddress1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
@@ -304,10 +300,11 @@
                         android:textSize="13sp" />
 
                     <TextView
+                        android:id="@+id/useraddress2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
-                        android:text="Alexandria, Egypt"
+                        android:text=""
                         android:textColor="#000000"
                         android:textSize="18sp" />
 

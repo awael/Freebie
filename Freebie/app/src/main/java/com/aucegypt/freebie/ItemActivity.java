@@ -27,7 +27,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 public class ItemActivity extends AppCompatActivity {
-    private static final String TAG = "retrieve database";
+    private static final String TAG = "retrieve database item";
     Button donate;
     Button editAddress;
     EditText addressHint;
