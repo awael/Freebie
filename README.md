@@ -21,7 +21,7 @@ Ahmed Ibrahim   900161555
 
 1- Project Overview
 
-Freebie aims to address multiple issues including the prevalence of poverty, the increased clutter and unneeded items in many households, and the large gap between some communities. Freebie tries to bridge this gap by acting as a platform for people to post their items to give away, along with contact information and pickup location, for any interested party to come pick it up free of charge. Freebie will limit users by tying accounts by their authenticated cell phone numbers in order to avoid exploitation of the system 
+Freebie aims to address multiple issues including the prevalence of poverty, the increased clutter and unneeded items in many households, and the large gap between some communities. Freebie tries to bridge this gap by acting as a platform for people to post their items to give away, along with contact information and pickup location, for NGOs to come pick it up free of charge.
  
  <br/>
 
@@ -30,15 +30,11 @@ Freebie aims to address multiple issues including the prevalence of poverty, the
 2- Application Features
 
 A user of the application should be able to:
-      
-      -Perform two-factor authentication (2FA) to tie an account with a cell phone number
-      
+            
       -Post an item up for donation after specifying  key attributes such as category, contact information and location of pickup.
       
       -Set a posted item as donated, removing it from the platform.
-      
-      -Search for an item using specified filters, and access contact information to pick up the item. 
-      
+            
       -Keep track of obtained items, with a limit set on maximum items obtained per week.
       
  <br/>
@@ -50,19 +46,19 @@ A user of the application should be able to:
 
   -Login/Signup:
   
-      Users can enter their credentials to login or signup. 2FA will be used when signing up 
+      Users can enter their credentials to login or signup.
       
   -Homepage:
   
       Users are greeted and can either choose to donate or look for an item.
       
-  -Listed Items:
+  -Listed Items (NGO view):
   
-      Users can use filters to search for a posted item.
+      NGOs can see donated items
       
-  -View Contact info:
+  -View Profile:
   
-      Users can access contact info associated with an item.
+      Users can access and edit their contact info.
       
   -List an Item:
   
