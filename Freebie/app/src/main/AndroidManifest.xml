@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Freebie">
-        <activity android:name=".about"></activity>
+        <activity android:name=".aboutStatic"></activity>
+        <activity android:name=".about" />
         <activity android:name=".ngoView" />
         <activity android:name=".track" />
         <activity android:name=".afterSplash">

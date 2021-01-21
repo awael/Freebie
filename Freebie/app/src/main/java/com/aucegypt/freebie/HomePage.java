@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.GridLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -87,7 +86,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
                startActivity(intent);
                 break;
             case R.id.aboutusSideMenu:
-                intent = new Intent(this, about.class);
+                intent = new Intent(this, aboutStatic.class);
                 startActivity(intent);
                 break;
             case R.id.signoutSideMenu:

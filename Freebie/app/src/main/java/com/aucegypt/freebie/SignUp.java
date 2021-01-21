@@ -27,6 +27,7 @@ import java.util.regex.Pattern;
 
 public class SignUp extends AppCompatActivity {
     Button btn1;
+    Button ngoButton;
     TextView textView;
     private EditText email, password, confirm_password, name, phonenumber, address;
     private FirebaseAuth firebaseAuth;
@@ -38,6 +39,8 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         btn1 = (Button) findViewById(R.id.signupbtn);
+        ngoButton = (Button) findViewById(R.id.ngosignup);
+
         email = findViewById(R.id.signupemailtxt);
         password = findViewById(R.id.passwordtxt);
         name = findViewById(R.id.nametxt);
@@ -56,6 +59,13 @@ public class SignUp extends AppCompatActivity {
 //                Intent intent=new Intent(SignUp.this,HomePage.class);
 //                startActivity(intent);
                 createUser();
+            }
+        });
+        ngoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SignUp.this,aboutStatic.class);
+                startActivity(intent);
             }
         });
         textView.setOnClickListener(new View.OnClickListener() {

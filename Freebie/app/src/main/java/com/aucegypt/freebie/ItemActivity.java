@@ -1,22 +1,39 @@
 package com.aucegypt.freebie;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
 public class ItemActivity extends AppCompatActivity {
+    private static final String TAG = "retrieve database";
     Button donate;
     Button editAddress;
+    EditText addressHint;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+
 
 
     RelativeLayout relativeLayout;
@@ -32,6 +49,7 @@ public class ItemActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item);
+
 
         Intent intent = getIntent();
         int widgetNum = intent.getExtras().getInt("widgetIndex");
@@ -103,6 +121,30 @@ public class ItemActivity extends AppCompatActivity {
 
         relativeLayout = findViewById(R.id.rel1);
         handler.postDelayed(runnable, 500);
+
+
+        DocumentReference docRef = db.collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        Log.d(TAG, "DocumentSnapshot data: " + document.getData());
+                        EditText addressHint = (EditText)findViewById(R.id.addressHint);
+                        addressHint.setHint(document.getString("address"));
+                    } else {
+                        Log.d(TAG, "No such document");
+                    }
+                } else {
+                    Log.d(TAG, "get failed with ", task.getException());
+                }
+            }
+        });
+
+
+
+
 
         editAddress=(Button)findViewById(R.id.addressButton);
         editAddress.setOnClickListener(new View.OnClickListener() {

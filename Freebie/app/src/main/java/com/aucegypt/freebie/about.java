@@ -29,7 +29,7 @@ public class about extends AppCompatActivity {
         infoTitle = getResources().getStringArray(R.array.dev_info);
         infoSubtitle = getResources().getStringArray(R.array.dev_info_subtitle);
 
-        listView = findViewById(R.id.infoList);
+//        listView = findViewById(R.id.infoList);
         InfoAdapter infoAdapter = new InfoAdapter(this, infoTitle, infoSubtitle);
         listView.setAdapter(infoAdapter);
     }
