@@ -108,7 +108,7 @@
                             android:background="@drawable/tb_item"
                             android:editable="false"
                             android:fontFamily="sans-serif-light"
-                            android:hint="AutoFilled Address"
+                            android:hint="Fetching Address ..."
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
                             android:textColor="@color/black"
