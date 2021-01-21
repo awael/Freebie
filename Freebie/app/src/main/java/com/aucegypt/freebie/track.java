@@ -22,6 +22,7 @@ import com.baoyz.swipemenulistview.SwipeMenuCreator;
 import com.baoyz.swipemenulistview.SwipeMenuItem;
 import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -41,6 +42,8 @@ public class track extends AppCompatActivity {
     private static final String TAG = "Track activity";
     String userID;
     ArrayList<String> arrayList=new ArrayList<String>();
+    ArrayList<String> ids =new ArrayList<String>();
+
 
 
 
@@ -51,18 +54,8 @@ public class track extends AppCompatActivity {
         setContentView(R.layout.activity_track);
         SwipeMenuListView listView=(SwipeMenuListView)findViewById(R.id.listView);
 
-//        arrayList.add("T-Shirt");
-//        arrayList.add("Data structure book");
-//        arrayList.add("Chair");
-//        addItem.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent1=new Intent(getApplicationContext(),HomePage.class);
-//                startActivity(intent1);
-//            }
-//        });
 
-//        userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
         CollectionReference donRef = db.collection("Donations");
         Query donQuery = donRef.whereEqualTo("userID", FirebaseAuth.getInstance().getCurrentUser().getUid());
         donQuery.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -72,6 +65,8 @@ public class track extends AppCompatActivity {
                     adapter=new ArrayAdapter(track.this, android.R.layout.simple_list_item_1,arrayList);
                     listView.setAdapter(adapter);
                     for(QueryDocumentSnapshot documentSnapshot: task.getResult()){
+
+                        ids.add(documentSnapshot.getId());
                         arrayList.add(documentSnapshot.getString("category")+" donated to " + documentSnapshot.getString("ngo"));
                     }
                 }
@@ -105,20 +100,35 @@ public class track extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
                 switch (index) {
+//                    case 0:
+//
+//
+//                        break;
                     case 0:
-
-
-                        break;
-                    case 1:
                         int itemnum=position;
                         new AlertDialog.Builder(track.this)
                                 .setIcon(android.R.drawable.ic_dialog_alert)
                                 .setTitle("Confirm")
-                                .setMessage("Are you sure you want to mark this item as donated?")
+                                .setMessage("Are you sure you want to delete this item?")
                                 .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
+
+                                        db.collection("Donations").document(ids.get(itemnum)).delete()
+                                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                    @Override
+                                                    public void onSuccess(Void aVoid) {
+                                                        Log.d(TAG, "DocumentSnapshot successfully deleted!");
+                                                    }
+                                                })
+                                                .addOnFailureListener(new OnFailureListener() {
+                                                    @Override
+                                                    public void onFailure(@NonNull Exception e) {
+                                                        Log.w(TAG, "Error deleting document", e);
+                                                    }
+                                                });
                                         arrayList.remove(itemnum);
+                                        ids.remove(itemnum);
                                         adapter.notifyDataSetChanged();
                                     }
                                 })
