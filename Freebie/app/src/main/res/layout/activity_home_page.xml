@@ -123,7 +123,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:progress="33"
+                                android:progress="0"
                                 app:trackThickness="8dp" />
 
                         </androidx.cardview.widget.CardView>
@@ -169,7 +169,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:progress="77"
+                                android:progress="0"
                                 app:trackThickness="8dp" />
 
                         </androidx.cardview.widget.CardView>
@@ -217,7 +217,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:progress="55"
+                                android:progress="0"
                                 app:trackThickness="8dp" />
                         </androidx.cardview.widget.CardView>
                         <!-- Col 2 -->
@@ -262,7 +262,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:progress="12"
+                                android:progress="0"
                                 app:trackThickness="8dp" />
                         </androidx.cardview.widget.CardView>
 
@@ -309,7 +309,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:progress="89"
+                                android:progress="0"
                                 app:trackThickness="8dp" />
                         </androidx.cardview.widget.CardView>
                         <!-- Col 2 -->
@@ -354,7 +354,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:progress="21"
+                                android:progress="0"
                                 app:trackThickness="8dp" />
                         </androidx.cardview.widget.CardView>
 
@@ -401,7 +401,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:progress="12"
+                                android:progress="0"
                                 app:trackThickness="8dp" />
                         </androidx.cardview.widget.CardView>
                         <!-- Col 2 -->
@@ -446,7 +446,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:progress="33"
+                                android:progress="0"
                                 app:trackThickness="8dp" />
                         </androidx.cardview.widget.CardView>
 
@@ -493,7 +493,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:progress="66"
+                                android:progress="0"
                                 app:trackThickness="8dp" />
                         </androidx.cardview.widget.CardView>
                         <!-- Col 2 -->
@@ -538,7 +538,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:progress="55"
+                                android:progress="0"
                                 app:trackThickness="8dp" />
                         </androidx.cardview.widget.CardView>
 
@@ -585,7 +585,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:progress="88"
+                                android:progress="0"
                                 app:trackThickness="8dp" />
                         </androidx.cardview.widget.CardView>
                         <!-- Col 2 -->
@@ -630,7 +630,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:progress="12"
+                                android:progress="0"
                                 app:trackThickness="8dp" />
                         </androidx.cardview.widget.CardView>
 
@@ -673,11 +673,11 @@
 
                             </LinearLayout>
                             <com.google.android.material.progressindicator.LinearProgressIndicator
-                                android:id="@+id/progressBar14"
+                                android:id="@+id/progressBar13"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:progress="12"
+                                android:progress="0"
                                 app:trackThickness="8dp" />
                         </androidx.cardview.widget.CardView>
                         <!-- Col 2 -->
@@ -718,11 +718,11 @@
 
                             </LinearLayout>
                             <com.google.android.material.progressindicator.LinearProgressIndicator
-                                android:id="@+id/progressBar13"
+                                android:id="@+id/progressBar14"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:progress="100"
+                                android:progress="0"
                                 app:trackThickness="8dp" />
                         </androidx.cardview.widget.CardView>
 

@@ -37,7 +37,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 
 public class track extends AppCompatActivity {
-    private Button addItem;
+    private Button backButton;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     private static final String TAG = "Track activity";
     String userID;
@@ -52,9 +52,18 @@ public class track extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track);
+
+        backButton=(Button)findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(track.this, HomePage.class);
+                startActivity(intent);
+            }
+        });
+
+
         SwipeMenuListView listView=(SwipeMenuListView)findViewById(R.id.listView);
-
-
 
         CollectionReference donRef = db.collection("Donations");
         Query donQuery = donRef.whereEqualTo("userID", FirebaseAuth.getInstance().getCurrentUser().getUid());
