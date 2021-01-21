@@ -60,10 +60,17 @@ public class MainActivity extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
-                                Toast.makeText(MainActivity.this, "Logged in successfully!", Toast.LENGTH_SHORT).show();
 
-                                Intent intent=new Intent(MainActivity.this, HomePage.class);
-                                startActivity(intent);
+                                if (FirebaseAuth.getInstance().getCurrentUser().getUid().equals("3YP7zebwmkQpFyJeumiBH5wQpGa2")){ //resala login: resala@gmail.com password:resalaegypt
+                                    Toast.makeText(MainActivity.this, "NGO LOGIN", Toast.LENGTH_LONG).show();
+                                    Intent intent=new Intent(MainActivity.this, ngoView.class);
+                                    startActivity(intent);
+                                }
+                                else{
+                                    Toast.makeText(MainActivity.this, "Logged in successfully!", Toast.LENGTH_SHORT).show();
+                                    Intent intent=new Intent(MainActivity.this, HomePage.class);
+                                    startActivity(intent);
+                                }
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                     @Override

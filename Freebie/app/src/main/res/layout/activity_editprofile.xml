@@ -71,6 +71,9 @@
             android:id="@+id/updateprofilebutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="4dp"
             android:backgroundTint="@color/gradEnd"
             android:text="Confirm"
             app:layout_constraintStart_toStartOf="parent"
@@ -190,6 +193,7 @@
                         android:textSize="13sp" />
 
                     <EditText
+                        android:editable="false"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
@@ -219,6 +223,7 @@
                         android:textSize="13sp" />
 
                     <EditText
+                        android:editable="false"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
@@ -284,36 +289,6 @@
                         android:fontFamily="sans-serif-light"
                         android:text="New Cairo, Egypt"
                         android:id="@+id/editAddress1"
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="15dp"
-                        android:background="@color/grey" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="15dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Address2"
-                        android:textColor="@color/headings"
-                        android:textSize="13sp" />
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-light"
-                        android:text=""
-                        android:id="@+id/editAddress2"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 

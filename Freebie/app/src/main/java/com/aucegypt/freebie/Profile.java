@@ -21,7 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class Profile extends AppCompatActivity {
     private static final String TAG = "retrieve database prof";
     Button editProfileButton;
-    TextView username, noItemsDonated, username2, username3, useremail, userphone, useraddress1, useraddress2;
+    TextView username, noItemsDonated, username2, username3, useremail, userphone, useraddress1,addressSmall;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
@@ -38,13 +38,14 @@ public class Profile extends AppCompatActivity {
         });
 
         username = (TextView)findViewById(R.id.username);
+        addressSmall = (TextView)findViewById(R.id.addressSmall);
+
         noItemsDonated = (TextView)findViewById(R.id.noItemsDonated);
         username2 = (TextView)findViewById(R.id.username2);
         username3 = (TextView)findViewById(R.id.username3);
         useremail = (TextView)findViewById(R.id.useremail);
         userphone = (TextView)findViewById(R.id.userphone);
         useraddress1 = (TextView)findViewById(R.id.useraddress1);
-        useraddress2 = (TextView)findViewById(R.id.useraddress2);
 
         DocumentReference docRef = db.collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -63,7 +64,7 @@ public class Profile extends AppCompatActivity {
                         useremail.setText(document.getString("email"));
                         userphone.setText(document.getString("phone"));
                         useraddress1.setText(document.getString("address"));
-                        useraddress2.setText("");
+                        addressSmall.setText(document.getString("address"));
                     } else {
                         Log.d(TAG, "No such document");
                     }

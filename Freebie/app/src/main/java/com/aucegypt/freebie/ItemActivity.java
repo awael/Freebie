@@ -150,7 +150,7 @@ public class ItemActivity extends AppCompatActivity {
         editAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(ItemActivity.this, Profile.class);
+                Intent intent=new Intent(ItemActivity.this, editProfile.class);
                 startActivity(intent);
             }
         });
