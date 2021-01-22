@@ -44,6 +44,8 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
+        firebaseAuth = FirebaseAuth.getInstance();
+
         toolbar = findViewById(R.id.homepage_toolbar);
         setSupportActionBar(toolbar);
 
@@ -319,7 +321,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        firebaseAuth.getInstance();
+//        firebaseAuth.getInstance();
 
         switch (id){
             case R.id.profileSideMenu:
@@ -335,9 +337,11 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
                 startActivity(intent);
                 break;
             case R.id.signoutSideMenu:
-                firebaseAuth.signOut();
-                startActivity(new Intent(HomePage.this, MainActivity.class));
-                finish();
+                if (firebaseAuth != null){
+                    firebaseAuth.signOut();
+                    startActivity(new Intent(HomePage.this, MainActivity.class));
+                    finish();
+                }
 //                intent = new Intent(this, MainActivity.class);
 //                startActivity(intent);
                 break;

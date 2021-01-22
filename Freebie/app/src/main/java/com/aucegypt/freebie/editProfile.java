@@ -87,7 +87,7 @@ public class editProfile extends AppCompatActivity {
 
 
 
-                Intent intent=new Intent(editProfile.this, Profile.class);
+                Intent intent=new Intent(editProfile.this, HomePage.class);
                 startActivity(intent);
             }
         });
