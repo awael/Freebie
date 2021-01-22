@@ -14,15 +14,19 @@ import android.widget.TextView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class Profile extends AppCompatActivity {
     private static final String TAG = "retrieve database prof";
     Button editProfileButton;
     TextView username, noItemsDonated, username2, username3, useremail, userphone, useraddress1,addressSmall;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +41,24 @@ public class Profile extends AppCompatActivity {
             }
         });
 
+        noItemsDonated = (TextView)findViewById(R.id.noItemsDonated);
+        CollectionReference donRef = db.collection("Donations");
+        Query donQuery = donRef.whereEqualTo("userID",  FirebaseAuth.getInstance().getCurrentUser().getUid());
+        donQuery.get().addOnCompleteListener(task -> {
+            if(task.isSuccessful()){
+                QuerySnapshot documentSnapshot =  task.getResult();
+                count = documentSnapshot.size();
+                noItemsDonated.setText(String.valueOf(count));
+
+            }
+            else{
+                System.out.println("Failed");
+            }
+        });
+
         username = (TextView)findViewById(R.id.username);
         addressSmall = (TextView)findViewById(R.id.addressSmall);
 
-        noItemsDonated = (TextView)findViewById(R.id.noItemsDonated);
         username2 = (TextView)findViewById(R.id.username2);
         username3 = (TextView)findViewById(R.id.username3);
         useremail = (TextView)findViewById(R.id.useremail);
@@ -57,7 +75,6 @@ public class Profile extends AppCompatActivity {
                         Log.d(TAG, "DocumentSnapshot data: " + document.getData());
 
                         username.setText(document.getString("fName"));
-                        noItemsDonated.setText("10");
                         username2.setText(document.getString("fName"));
                         String[] tokens = document.getString("email").split("@");
                         username3.setText(tokens[0]);
