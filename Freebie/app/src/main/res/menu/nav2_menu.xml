@@ -2,12 +2,12 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Public Donations"
+    <item android:title="Donations"
         android:id="@+id/ngoView_public"
-        android:icon="@drawable/ic_ngopub"/>
+        android:icon="@drawable/ic_baseline_card_giftcard_24"/>
 
-    <item android:title="NGO Donations"
+    <item android:title="NGO Profile"
         android:id="@+id/ngoView_private"
-        android:icon="@drawable/ic_ngopriv"/>
+        android:icon="@drawable/ic_baseline_supervised_user_circle_24"/>
 
 </menu>

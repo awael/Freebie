@@ -3,6 +3,7 @@ package com.aucegypt.freebie;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,8 +17,8 @@ public class ngoView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ngo_view);
-     /*   View bottomNavigation = findViewById(R.id.fragment);
-       // BottomNavigationView.OnNavigationItemSelectedListener
+        View bottomNavigation = findViewById(R.id.fragment);
+//        BottomNavigationView.OnNavigationItemSelectedListener
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.anav);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -25,15 +26,17 @@ public class ngoView extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.ngoView_public:
                         //Toast.makeText(this, "Recents", Toast.LENGTH_SHORT).show();
-                        openFragment(ngoView_public.newInstance("", ""));
+//                        openFragment(ngoView_public.newInstance("", ""));
                         break;
                     case R.id.ngoView_private:
+                        Intent intent=new Intent(ngoView.this, ngoProfile.class);
+                        startActivity(intent);
                         //Toast.makeText(MainActivity.this, "Favorites", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 return true;
             }
-        });*/
+        });
 
     }
 }

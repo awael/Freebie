@@ -64,6 +64,13 @@ public class MainActivity extends AppCompatActivity {
                                 if (FirebaseAuth.getInstance().getCurrentUser().getUid().equals("3YP7zebwmkQpFyJeumiBH5wQpGa2")){ //resala login: resala@gmail.com password:resalaegypt
                                     Toast.makeText(MainActivity.this, "NGO LOGIN", Toast.LENGTH_LONG).show();
                                     Intent intent=new Intent(MainActivity.this, ngoView.class);
+                                    intent.putExtra("ngo", "Resala");
+                                    startActivity(intent);
+                                }
+                                else if (FirebaseAuth.getInstance().getCurrentUser().getUid().equals("iJNy7qTR1AV7Fuoef0yrWMaA4bi1")){ //resala login: resala@gmail.com password:resalaegypt
+                                    Toast.makeText(MainActivity.this, "NGO LOGIN", Toast.LENGTH_LONG).show();
+                                    Intent intent=new Intent(MainActivity.this, ngoView.class);
+                                    intent.putExtra("ngo", "Masr El-Kheir");
                                     startActivity(intent);
                                 }
                                 else{
